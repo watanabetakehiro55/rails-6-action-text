@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-  has
+  has_rich_text :content
 end
