@@ -67,8 +67,8 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # NOTE contentについてもホワイトリストとして登録
     def post_params
-      params.require(:post).permit(:title)
+      params.require(:post).permit(:title, :content)
     end
 end
